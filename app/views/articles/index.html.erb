@@ -3,7 +3,12 @@
 <ul id="articles">
   <% @articles.each do |article| %>
     <li>
-      <%= article.title %>
+      <!-- This is how you do it with plain html: -->
+      <!-- <h3><a class="article-title" href="/articles/<%= article.id %>"><%= article.title %></a></h3> -->
+
+      <!-- This is how you do it with a Rails helper: -->
+      <%= link_to article.title, "/articles/#{article.id}" %>
     </li>
   <% end %>
 </ul>
+<%= link_to "Create a New Article", "/articles/new" %>
