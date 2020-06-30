@@ -40,6 +40,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'pry'
   gem 'active_designer'
+  gem 'awesome_print'
 end
 
 group :development do
